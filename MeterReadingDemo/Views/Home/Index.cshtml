@@ -1,0 +1,15 @@
+﻿@model IEnumerable<MeterReadingDemo.Models.Account>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<form action="/meter-reading-uploads" enctype="multipart/form-data" method="post">
+    @Html.AntiForgeryToken()
+    <input type="file" name="FileUpload">
+    <input type="submit" value="Import">
+</form>
+
+
